@@ -560,6 +560,7 @@ MonoBehaviour:
   maxTime: 5
   EnemiesList:
   - {fileID: 5151486227988900619, guid: cd4fe3674af380a46aa90d2da3d8cb2f, type: 3}
+  - {fileID: 4284874515512070064, guid: d09527a853ad5d64197485ec0fe11670, type: 3}
 --- !u!1 &1847012071
 GameObject:
   m_ObjectHideFlags: 0

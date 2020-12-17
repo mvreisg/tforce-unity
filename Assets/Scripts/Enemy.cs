@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float Speed;
+    public float minSpeed;
+    public float maxSpeed;
     private Transform backPoint;
     private Animator animator;
     private Rigidbody2D rig;
@@ -22,7 +23,7 @@ public class Enemy : MonoBehaviour
         // Mesma lógica da bala só que para a esquerda
         //transform.Translate(Vector3.left * Speed * Time.deltaTime);
 
-        rig.velocity = new Vector2(-Speed, rig.velocity.y);
+        rig.velocity = new Vector2(-Random.Range(minSpeed, maxSpeed), rig.velocity.y);
 
         if (transform.position.x < backPoint.position.x)
         {
