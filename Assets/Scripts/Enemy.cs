@@ -20,23 +20,27 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Mesma lógica da bala só que para a esquerda
-        //transform.Translate(Vector3.left * Speed * Time.deltaTime);
-
-        rig.velocity = new Vector2(-Random.Range(minSpeed, maxSpeed), rig.velocity.y);
-
-        if (transform.position.x < backPoint.position.x)
+        if (GameController.current.PlayerIsAlive)
         {
-            Destroy(gameObject);
-        }
+            // Mesma lógica da bala só que para a esquerda
+
+            rig.velocity = new Vector2(-Random.Range(minSpeed, maxSpeed), rig.velocity.y);
+
+            if (transform.position.x < backPoint.position.x)
+            {
+                Destroy(gameObject);
+            }
+        }        
     }
 
-    // Método para verificar colisao da bala no inimigp
+    // Método para verificar colisao da bala no inimigo
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Se o inimigo bateu na bala
         if (collision.gameObject.tag.Equals("bullet"))
         {
+            GetComponent<CircleCollider2D>().enabled = false;
+            GameController.current.AddScore(10); // Ao matar o inimigo, ganha 10 moedas
             animator.SetTrigger("destroy");
             Destroy(gameObject, 1f);
         }
