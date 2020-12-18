@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
@@ -283,7 +283,6 @@ Transform:
   m_LocalPosition: {x: 5.269432, y: 0.6697136, z: -0.20117188}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2013639587}
   - {fileID: 2043659423}
   - {fileID: 840951986}
   - {fileID: 278162140}
@@ -388,6 +387,7 @@ Transform:
   - {fileID: 65711737}
   - {fileID: 770004841}
   - {fileID: 1420585963}
+  - {fileID: 1012236289}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -705,6 +705,50 @@ MonoBehaviour:
   point: {fileID: 1847416458}
   minDistance: 2.5
   maxDistance: 5
+--- !u!1 &1012236288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1012236289}
+  - component: {fileID: 1012236290}
+  m_Layer: 0
+  m_Name: SpawnCoins
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1012236289
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012236288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.77, y: -2.96, z: 9.799805}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 519420032}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1012236290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012236288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d147869f231c548a228b4aa880ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coin: {fileID: 6144690525723461781, guid: 52fd77bfa3c1c544b8b5513c1e981860, type: 3}
 --- !u!1 &1075065277
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +1015,7 @@ PrefabInstance:
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
@@ -1322,6 +1366,7 @@ MonoBehaviour:
   scoreText: {fileID: 586396633}
   coinText: {fileID: 1932557532}
   ScorePerSecond: 10
+  PlayerIsAlive: 0
 --- !u!1001 &1892044136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1372,7 +1417,7 @@ PrefabInstance:
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
@@ -1469,12 +1514,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932557530}
   m_CullTransparentMesh: 0
---- !u!4 &2013639587 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
-    type: 3}
-  m_PrefabInstance: {fileID: 6144690526394334004}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2043659423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
@@ -1624,7 +1663,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 310242236}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6144690525723461781, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
@@ -1634,17 +1673,17 @@ PrefabInstance:
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.189432
+      value: 1.0799999
       objectReference: {fileID: 0}
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.6597136
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.20117188
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
@@ -1669,7 +1708,7 @@ PrefabInstance:
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6144690525723461783, guid: 52fd77bfa3c1c544b8b5513c1e981860,
         type: 3}
