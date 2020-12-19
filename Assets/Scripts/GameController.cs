@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class GameController : MonoBehaviour
     public static GameController current;
 
     public bool PlayerIsAlive;
+
+    public GameObject GameOverPanel;
+
+    public Button RestartBtn;
 
     // Start is called before the first frame update
     void Start()
@@ -46,5 +51,10 @@ public class GameController : MonoBehaviour
     {
         CoinScore += value;
         coinText.text = CoinScore.ToString("0000");
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 }
